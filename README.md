@@ -1,5 +1,5 @@
 # Ex01 Django ORM Web Application
-## Date: 
+## Date: 30-01-2026
 
 ## AIM
 To develop a Django Application to store and retrieve data from a E-Commerce Website Database for Amazon or Flipkart using Object Relational Mapping(ORM).
@@ -35,10 +35,34 @@ Apply the migration files of the created app to the database
 Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
+```
+models.py
+from django.db import models
+from django.contrib import admin
+class zomatoDB(models.Model):
+    Name=models.CharField(max_length=25);
+    Address=models.CharField(max_length=100);
+    Email=models.EmailField();
+    Mobile_no=models.IntegerField();
+    OTP=models.IntegerField(primary_key=True);
+    Time=models.TimeField();
+    Ratings=models.FloatField();
+    Amount=models.FloatField();
+class DeliveryDBAdmin(admin.ModelAdmin):
+	list_display=['Name','Address','Email','Mobile_no','OTP','Time','Ratings','Amount'];
+
+admin.py
+from django.contrib import admin
+from .models import zomatoDB,DeliveryDBAdmin
+admin.site.register(zomatoDB,DeliveryDBAdmin)
+```
+
+
 
 
 
 ## OUTPUT
+![alt text](<Screenshot 2026-01-30 122555.png>)
 
 
 
