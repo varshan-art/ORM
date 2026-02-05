@@ -62,7 +62,7 @@ admin.site.register(zomatoDB,DeliveryDBAdmin)
 
 ## OUTPUT
 
-![alt text](<Screenshot 2026-01-31 113703.png>)
+![alt text](<Screenshot 2026-01-31 113703.png>) 
 
 
 
